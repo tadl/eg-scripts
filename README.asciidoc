@@ -1,0 +1,25 @@
+Miscellaneous Evergreen scripts
+===============================
+
+Miscellaneous Evergreen utility scripts that may not have any other home
+
+The Scripts
+-----------
+
+recalc-penalties.pl
+~~~~~~~~~~~~~~~~~~~
+
+Script to mass-update system standing penalties
+
+This script can be useful after a configuration/policy change
+to the system standing penalty thresholds.
+
+For example, if a patron owes $11 and the old threshold for
+PATRON_EXCEEDS_FINES was $10, and the new limit is $15, this
+script can be used to update all affected patrons so that
+they no longer have the standing penalty applied.
+
+This script requires a list of patron IDs (example SQL query
+can be found in the comments), an Evergreen session token,
+and can be pointed at your Evergreen server's /osrf-gateway-v1
+endpoint.
